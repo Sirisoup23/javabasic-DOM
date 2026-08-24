@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Practice</title>
+    <style>
+        .active {
+            background: blue;
+            color: blueviolet;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+
+        .big {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="main-title">Welcome to JavaScript!</h1>
+    <p class="description">This is a paragraph.</p>
+    <button id="change-btn">Change Text</button>
+    <div id="output"></div>
+    <h2 id="sub-title">Favorite Subjects</h2>
+    <p class="content">My favorite subjects is...</p>
+    <ul id="list">
+        <li>Math</li>
+        <li>Computer</li>
+        <li>Occupation</li>
+    </ul>
+
+
+    <button id="change-btn">Change Text</button>
+    <div id="output"></div>
+
+    <!-- ################################################################ -->
+    <!-- Change Style -->
+    <button id="style-btn">Change Style</button>
+    <div id="box" style="width:200px;height:100px;background:lightgray;">
+        Click the button
+    </div>
+    <!-- ################################################################ -->
+
+
+    <script>
+
+        let title = document.getElementById("main-title");
+        // title.style.color = "red";
+        // title.style.fontSize = "32px";
+        // title.style.background = "black";
+        // title.style.padding = "20px";
+        // console.log("Title:", title);
+
+        let paragraph = document.querySelector(".description");
+        paragraph.style.color = "red";
+        console.log("Paragraph:", paragraph);
+        let subtitle = document.getElementById("sub-title");
+        console.log("sub title:", subtitle);
+        let button = document.querySelector(".change-btn");
+        console.log("Button:", button);
+        //title.classList.toggle("active");
+        //title.classList.remove("active");
+        //title.classList.toggle("active");
+
+
+        let styleButton = document.querySelector("#box");
+        //console.log(styleButton);
+        styleButton.addEventListener("click", function(){
+            title.classList.toggle(".active");
+        })
+
+
+
+
+
+
+
+        title.textContent = "Hello Grade 9!";
+        paragraph.textContent = "Learning JavaScript is fun! like you in hell right now";
+        subtitle.textContent = "Favorite Subjects";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
